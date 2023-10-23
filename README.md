@@ -1,6 +1,6 @@
-# Validated Enterprise Spring Boot Application
+# Enterprise Spring Boot Application Template
 
-Project Template 1 is a Java application that demonstrates the structure and organization of a Spring Boot application with a focus on the Data Access Layer (DAL). It showcases the use of various classes, interfaces, and design patterns to interact with a database and perform user-related operations.
+Project Template is a Java application template using enterprise architecture and design to make it easy to understand, extend and maintain. It showcases the use of various classes, interfaces, and design patterns to interact with a database and perform user-related operations.
 
 ## Controllers
 

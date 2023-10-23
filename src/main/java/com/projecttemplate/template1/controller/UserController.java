@@ -19,7 +19,6 @@ public class UserController {
     }
  
     /* api call =>  http://localhost:8080/user/1 */
-//    @RequestMapping(path = "/user/{userid}", method = RequestMethod.GET)
     @GetMapping("/{userid}")
     public String getUserName(@PathVariable int userid) {
         // Call GetUser function
@@ -32,7 +31,6 @@ public class UserController {
           valid username and password: http://localhost:8080/user/johncena/cenapassword
           invalid password http://localhost:8080/user/johncena/invalidpassword */
 
-//    @RequestMapping(path = "/user/{username}/{password}", method = RequestMethod.GET)
     @GetMapping("/{username}/{password}")
     public ResponseEntity Login(@PathVariable String username,
                                 @PathVariable String password) {
@@ -52,7 +50,8 @@ public class UserController {
         if (this._userDao.Login(username, password)) {
             return ResponseEntity.ok("Login successful.");
         } else {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Invalid user name and/or password.");
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+                    .body("Invalid user name and/or password.");
         }
     }
 }
