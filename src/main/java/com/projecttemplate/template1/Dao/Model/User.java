@@ -3,10 +3,15 @@ package com.projecttemplate.template1.Dao.Model;
 import com.projecttemplate.template1.Dao.Validator.ValidateLength;
 import com.projecttemplate.template1.Dao.Validator.ValidateRequired;
 import com.projecttemplate.template1.Dao.Validator.Validator;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 
 /*
 * User data model
 */
+@Entity
 public class User extends Validator {
 
     /*
@@ -40,6 +45,8 @@ public class User extends Validator {
     /*
     * User identifier
     */
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public int UserId;
 
     /*
